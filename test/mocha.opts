@@ -1,0 +1,5 @@
+--compilers coffee:coffee-script
+--require should
+--require sinon
+
+--require test/support/node

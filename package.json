@@ -1,0 +1,33 @@
+{
+  "name": "neow",
+  "version": "0.0.1",
+
+  "description": "Node EVE Online API Wrapper with promises",
+  "license": "MIT",
+
+  "dependencies": {
+    "q": "*",
+    "q-io": "*",
+    "lodash": "*",
+    "sax": "*",
+    "numeral": "*"
+  },
+  "devDependencies": {
+    "coffee-script": "*",
+    "grunt": "*",
+    "grunt-contrib-coffee": "*",
+    "mocha": "*",
+    "chai": "*",
+    "chai-as-promised": "*",
+    "should": "*",
+    "sinon": "*"
+  },
+
+  "scripts": {
+    "prepublish": "grunt coffee",
+    "test": "mocha"
+  },
+
+  "main": "./lib/index.js"
+
+}

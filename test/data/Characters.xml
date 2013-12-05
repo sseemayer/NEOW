@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<eveapi version="2">
+  <currentTime>2013-12-03 10:23:42</currentTime>
+  <result>
+    <rowset name="characters" key="characterID" columns="name,characterID,corporationName,corporationID">
+      <row name="Tester Char" characterID="12345678" corporationName="Testing Corp" corporationID="11111111" />
+      <row name="Another Tester" characterID="98765432" corporationName="Testing Corp" corporationID="22222222" />
+    </rowset>
+  </result>
+  <cachedUntil>2013-12-03 11:05:42</cachedUntil>
+</eveapi>

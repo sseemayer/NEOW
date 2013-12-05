@@ -11,11 +11,16 @@ module.exports = function(grunt) {
         dest: 'lib',
         ext: '.js'
       }
+    },
+
+    clean: {
+      coffee: ['lib']
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', ['coffee']);
 

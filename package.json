@@ -16,6 +16,7 @@
     "coffee-script": "*",
     "grunt": "*",
     "grunt-contrib-coffee": "*",
+    "grunt-contrib-clean": "*",
     "mocha": "*",
     "chai": "*",
     "chai-as-promised": "*",
@@ -28,6 +29,15 @@
     "test": "mocha"
   },
 
-  "main": "./lib/index.js"
+  "main": "./lib/index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sseemayer/neow.git"
+  },
+
+  "bugs": {
+    "url": "http://github.com/sseemayer/NEOW/project/issues"
+  }
 
 }

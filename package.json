@@ -1,10 +1,8 @@
 {
   "name": "neow",
-  "version": "0.0.1",
-
+  "version": "0.0.2",
   "description": "Node EVE Online API Wrapper with promises",
   "license": "MIT",
-
   "dependencies": {
     "q": "*",
     "q-io": "*",
@@ -23,21 +21,16 @@
     "should": "*",
     "sinon": "*"
   },
-
   "scripts": {
     "prepublish": "grunt coffee",
     "test": "mocha"
   },
-
   "main": "./lib/index.js",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/sseemayer/neow.git"
   },
-
   "bugs": {
     "url": "http://github.com/sseemayer/neow/issues"
   }
-
 }

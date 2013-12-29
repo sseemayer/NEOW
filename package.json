@@ -19,7 +19,8 @@
     "chai": "*",
     "chai-as-promised": "*",
     "should": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "grunt-cli": "~0.1.11"
   },
   "scripts": {
     "prepublish": "grunt coffee",

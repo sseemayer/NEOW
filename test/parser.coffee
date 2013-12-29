@@ -3,6 +3,7 @@ fs = require 'q-io/fs'
 
 xmlFile = 'test/data/Characters.xml'
 bigXmlFile = 'test/data/SkillTree.xml'
+errorXmlFile = 'test/data/Error.xml'
 
 describe "parser", ->
 
@@ -36,3 +37,13 @@ describe "parser with skilltree", ->
 
   it "should have the drones skill", (done) ->
     expect(promise).to.eventually.have.deep.property('skillGroups[273].skills[3436].typeName', 'Drones').notify(done)
+
+describe "parser with error", ->
+  promise = null
+
+  beforeEach ->
+    promise = fs.read(errorXmlFile)
+      .then(parser.parse)
+
+  it "should reject on error", (done) ->
+    expect(promise).to.be.rejectedWith(Error).notify(done)

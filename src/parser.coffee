@@ -73,6 +73,9 @@ root.parse = (data, strict=true) ->
     if result.eveapi.version != '2'
       return deferred.reject new Error "Wrong eveapi version!"
 
+    if result.eveapi.error
+      return deferred.reject new Error result.eveapi.error.content
+
     res = result.eveapi.result
     res.currentTime = result.eveapi.currentTime.content
     res.cachedUntil = result.eveapi.cachedUntil.content

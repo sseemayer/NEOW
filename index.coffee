@@ -66,7 +66,7 @@ setTimeout ->
         for sklID, skl of grp.skills
           flatSkills[sklID] = skl
 
-      console.log characterSheet.name.content
+      console.log "#{characterSheet.name.content} (ID #{characterSheet.characterID.content})"
 
       totalSP = 0
       for sklID, skl of characterSheet.skills

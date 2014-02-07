@@ -4,12 +4,12 @@ fs = require 'q-io/fs'
 client = require '../src/eveapi/client'
 parser = require '../src/eveapi/parser'
 
-describe "Client", ->
+describe "EveClient", ->
 
   clnt = null
 
   beforeEach ->
-    clnt = new client.Client
+    clnt = new client.EveClient
     sinon.spy parser, "parse"
 
     sinon.stub http, "request", (url) ->

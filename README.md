@@ -23,7 +23,7 @@ NEOW tries to be the best EVE Online and EVE-Central API wrapper available for N
 
 	neow = require('neow');
 
-	client = new neow.Client({
+	client = new neow.EveClient({
 		keyID: '1234567',
 		vCode: 'nyanyanyanyanyanyanyanyan'
 	});
@@ -40,7 +40,7 @@ NEOW tries to be the best EVE Online and EVE-Central API wrapper available for N
 
 	neow = require 'neow'
 
-	client = new neow.Client
+	client = new neow.EveClient
 		keyID: '1234567'
 		vCode: 'nyanyanyanyanyanyanyanyan'
 	

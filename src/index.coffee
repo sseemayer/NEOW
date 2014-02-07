@@ -7,7 +7,9 @@ eveCentralClient = require './evecentral/client'
 eve = require './eve'
 format = require './format'
 
-root.Client = eveApiClient.Client
+root.EveClient = eveApiClient.EveClient
+root.Client = root.EveClient # Backward compatibility
+
 root.EveCentralClient = eveCentralClient.EveCentralClient
 
 root.eve = eve

@@ -6,7 +6,7 @@ memoryCache = require '../caching/memory'
 
 root = exports ? this
 
-class root.Client extends client.AbstractClient
+class root.EveClient extends client.AbstractClient
   constructor: (
     @default_params={keyID: null, vCode: null}
     api_url="https://api.eveonline.com"
@@ -23,3 +23,6 @@ class root.Client extends client.AbstractClient
           .replace(/\.xml\.aspx$/, '') + '.xml.aspx'
       )
       query: params
+
+# EveClient is a nicer name, but support Client for backward compatibility
+root.Client = root.EveClient

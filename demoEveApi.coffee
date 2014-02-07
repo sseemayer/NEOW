@@ -4,7 +4,7 @@ fs     = require 'q-io/fs'
 neow = require './src'
 params = require './config.json'
 
-client = new neow.Client(params, 'https://api.eveonline.com')
+client = new neow.EveClient(params, 'https://api.eveonline.com')
 
 ####
 ## Skill tree with requirements

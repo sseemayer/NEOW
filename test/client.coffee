@@ -15,7 +15,7 @@ describe "Client", ->
     sinon.stub http, "request", (url) ->
       if url == 'https://api.eveonline.com/server/ServerStatus.xml.aspx?keyID=&vCode='
         fs.read('test/data/ServerStatus.xml')
-          .then (result) -> { body: { read: () -> result } }
+          .then (result) -> { body: { read: () -> result }, status: 200 }
       else
         Q.reject Error "Queried invalid URL"
 

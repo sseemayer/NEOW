@@ -45,8 +45,11 @@ class root.Client
         result
       .fail ->
         http.request(reqURLFormatted)
-          .get('body')
-          .invoke('read')
+          .then (res) ->
+            if res.status != 200
+              return Q.reject new Error("API for '#{reqURLFormatted}' returned with HTTP status code #{res.status}")
+
+            res.body.read()
           .then(parser.parse)
           .then (result) ->
 

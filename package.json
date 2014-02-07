@@ -1,6 +1,6 @@
 {
   "name": "neow",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node EVE Online API Wrapper with promises",
   "license": "MIT",
   "dependencies": {

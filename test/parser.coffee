@@ -1,4 +1,4 @@
-parser = require '../src/parser'
+parser = require '../src/eveapi/parser'
 fs = require 'q-io/fs'
 
 xmlFile = 'test/data/Characters.xml'

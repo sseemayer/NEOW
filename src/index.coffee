@@ -1,7 +1,7 @@
 
 root = exports ? this
 
-client = require './client'
+client = require './eveapi/client'
 eve = require './eve'
 format = require './format'
 

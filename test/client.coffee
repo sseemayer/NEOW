@@ -1,8 +1,8 @@
 http = require 'q-io/http'
 fs = require 'q-io/fs'
 
-client = require '../src/client'
-parser = require '../src/parser'
+client = require '../src/eveapi/client'
+parser = require '../src/eveapi/parser'
 
 describe "Client", ->
 

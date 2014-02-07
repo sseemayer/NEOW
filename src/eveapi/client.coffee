@@ -2,7 +2,7 @@ Q = require 'q'
 http = require 'q-io/http'
 url = require 'url'
 _ = require 'lodash'
-memoryCache = require './caching/memory'
+memoryCache = require '../caching/memory'
 
 parser = require './parser'
 

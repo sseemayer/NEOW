@@ -2,14 +2,16 @@
 
 _N_ode.js _E_VE _O_nline API _W_rapper for the modern days - Promises, CoffeeScript, Tests, Caching, etc.
 
-In contrast to hamster.js, NEOW can parse nested &lt;rowset&gt; elements such as found in the `eve/SkillTree.xml.aspx` API without returning garbled/partial results. Also, it's written in CoffeeScript :)
+NEOW tries to be the best EVE Online and EVE-Central API wrapper available for Node.js. In contrast to hamster.js, NEOW can parse nested &lt;rowset&gt; elements such as found in the `eve/SkillTree.xml.aspx` API without returning garbled/partial results. It also includes support for parsing eve-central market data.
 
 ## Features
 
   * Access all of the EVE API
+  * Access the EVE Central API
   * Memory and Disk Caching
   * Formatters for skill levels, ISK values, etc.
   * Unit tested
+  * Examples included
 
 ## Installation
 

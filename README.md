@@ -6,10 +6,10 @@ In contrast to hamster.js, NEOW can parse nested &lt;rowset&gt; elements such as
 
 ## Features
 
-	* Access all of the EVE API
-	* Memory and Disk Caching
-	* Formatters for skill levels, ISK values, etc.
-	* Unit tested
+  * Access all of the EVE API
+  * Memory and Disk Caching
+  * Formatters for skill levels, ISK values, etc.
+  * Unit tested
 
 ## Installation
 

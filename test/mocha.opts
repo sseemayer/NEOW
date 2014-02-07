@@ -1,5 +1,5 @@
---compilers coffee:coffee-script
+--compilers coffee:coffee-script/register
 --require should
 --require sinon
 
---require test/support/node
+--require test/support/node.coffee

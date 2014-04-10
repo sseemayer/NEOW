@@ -10,8 +10,8 @@ root.cacheExpired = (cacheUntil, now=new Date) ->
   if typeof(cacheUntil) == 'string'
     cacheUntil = new Date(cacheUntil + " +00")
 
-  console.log cacheUntil
-  console.log now
+  console.log "\tnow  :", new Date(now).toJSON()
+  console.log "\tuntil:", new Date(cacheUntil).toJSON()
 
   cacheUntil < now
 

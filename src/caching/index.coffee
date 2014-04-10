@@ -10,6 +10,9 @@ root.cacheExpired = (cacheUntil, now=new Date) ->
   if typeof(cacheUntil) == 'string'
     cacheUntil = new Date(cacheUntil + " +00")
 
+  console.log cacheUntil
+  console.log now
+
   cacheUntil < now
 
 class root.Cache

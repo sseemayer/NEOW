@@ -41,9 +41,8 @@ describe "parser with skilltree", ->
 describe "parser with error", ->
   promise = null
 
-  beforeEach ->
+  it "should reject on error", (done) ->
     promise = fs.read(errorXmlFile)
       .then(parser.parse)
 
-  it "should reject on error", (done) ->
     expect(promise).to.be.rejectedWith(Error).notify(done)

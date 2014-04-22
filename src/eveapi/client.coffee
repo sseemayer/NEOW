@@ -16,7 +16,7 @@ class root.EveClient extends client.AbstractClient
     @api_url = url.parse api_url
 
   processURL: (path, params) ->
-    _.assign @api_url,
+    _.assign _.clone(@api_url),
       pathname: (
         path.replace(/^\//, '')
           .replace(/:/, '/')

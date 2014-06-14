@@ -1,4 +1,5 @@
 # NEOW
+[![Build Status](https://drone.io/github.com/sseemayer/NEOW/status.png)](https://drone.io/github.com/sseemayer/NEOW/latest)
 
 _N_ode.js _E_VE _O_nline API _W_rapper for the modern days - Promises, CoffeeScript, Tests, Caching, etc.
 

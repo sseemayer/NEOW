@@ -16,6 +16,7 @@ class root.EveCentralClient extends client.AbstractClient
     @api_url = url.parse api_url
 
   processURL: (path, params) ->
-    _.assign @api_url,
+    _.assign {},
+      @api_url,
       pathname: @api_url.pathname + path
       query: params

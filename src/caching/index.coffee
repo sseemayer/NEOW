@@ -6,23 +6,16 @@ root = exports ? this
 root.hashIdentifier = (identifier) ->
     crypto.createHash('sha1').update(identifier).digest('hex')
 
-root.cacheExpired = (cacheUntil, now=new Date) ->
-  if typeof(cacheUntil) == 'string'
-    cacheUntil = new Date(cacheUntil + " +00")
-
-  console.log "\tnow  :", new Date(now).toJSON()
-  console.log "\tuntil:", new Date(cacheUntil).toJSON()
-
+root.cacheExpired = (cacheUntil, now=Date.now()) ->
   cacheUntil < now
 
 class root.Cache
 
   get: (identifier) ->
     @_get(root.hashIdentifier identifier)
-      .then JSON.parse
 
   set: (identifier, cacheUntil, data) ->
-    @_set root.hashIdentifier(identifier), cacheUntil, JSON.stringify(data)
+    @_set root.hashIdentifier(identifier), cacheUntil, data
 
   del: (identifier) ->
     @_del root.hashIdentifier identifier

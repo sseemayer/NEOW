@@ -44,6 +44,6 @@ class root.AbstractClient
           .then (result) ->
 
             # only return after cache set is resolved
-            self.cache.set(reqURLFormatted, result.cachedUntil, result)
+            self.cache.set(reqURLFormatted, new Date(result.cachedUntil + ' +00').getTime(), result)
               .then ->
                 result

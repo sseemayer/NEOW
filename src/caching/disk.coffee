@@ -27,9 +27,10 @@ class root.DiskCache extends caching.Cache
             Q.reject new Error "Element #{idHex} has expired"
 
       Q element.data
+        .then JSON.parse
 
   _set: (idHex, cacheUntil, data) ->
-    element = {cacheUntil: cacheUntil, data: data}
+    element = {cacheUntil: cacheUntil, data: JSON.stringify(data)}
     qfs.write(@get_path(idHex), JSON.stringify element).then ->
       true
 

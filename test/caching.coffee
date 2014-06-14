@@ -14,26 +14,26 @@ cacheTest = (cacheName, cacheClass) =>
       expect(cache.get("nonexistant")).to.be.rejectedWith(Error).notify(done)
 
     it "should allow setting", (done) =>
-      expect(cache.set("anelement", new Date + 1000, {a: 'value'})).to.become(true).notify(done)
+      expect(cache.set("anelement", Date.now() + 1000, {a: 'value'})).to.become(true).notify(done)
 
     it "should allow deleting", (done) =>
-      cache.set("anelement", new Date + 1000, {a: 'value'})
+      cache.set("anelement", Date.now() + 1000, {a: 'value'})
         .then ->
           expect(cache.del("anelement")).to.become(true).notify(done)
 
     it "should retrieve existing keys", (done) =>
-      cache.set("anelement", new Date + 1000, {a: 'value'})
+      cache.set("anelement", Date.now() + 1000, {a: 'value'})
         .then ->
           expect(cache.get("anelement")).to.become({a: 'value'}).notify(done)
 
     it "should not retrieve expired keys", (done) =>
-      cache.set("anelement", new Date - 100, {a: 'value'})
+      cache.set("anelement", Date.now() - 1000, {a: 'value'})
         .then ->
           expect(cache.get("anelement")).to.be.rejectedWith(Error).notify(done)
 
     it "should not retrieve keys after deletion", (done) =>
 
-      cache.set("anelement", new Date + 1000, {a: 'value'})
+      cache.set("anelement", Date.now() + 1000, {a: 'value'})
         .then ->
           cache.del("anelement")
             .then ->

@@ -19,10 +19,8 @@ priceComparator = (inverse=false) ->
 
 client.fetch('quicklook', typeid: 31866, regionlimit: 10000002)
   .get('quicklook')
-  .get(0)
   .then (data) ->
-
-    regions = (for reg in data.regions[0].region
+    regions = (for reg in data.regions.region
       reg.replace(/^\s+|\s$/g, '')
     ).join(", ")
 
@@ -31,16 +29,16 @@ client.fetch('quicklook', typeid: 31866, regionlimit: 10000002)
     console.log ""
     console.log "Sell orders"
 
-    data.sell_orders[0].order.sort priceComparator()
-    data.buy_orders[0].order.sort priceComparator(true)
+    data.sell_orders.order.sort priceComparator()
+    data.buy_orders.order.sort priceComparator(true)
 
-    for so in data.sell_orders[0].order
+    for so in data.sell_orders.order
       console.log "#{so.station_name} (#{so.security}): #{so.vol_remain} items @ #{neow.format.isk(so.price)}"
 
     console.log ""
     console.log "Buy orders"
 
-    for so in data.buy_orders[0].order
+    for so in data.buy_orders.order
       console.log "#{so.station_name} (#{so.security}): #{so.vol_remain} items @ #{neow.format.isk(so.price)}"
 
   .done()

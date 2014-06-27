@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Node EVE Online API Wrapper with promises",
   "license": "MIT",
+  "engines": {
+    "node": ">= 0.8"
+  },
   "dependencies": {
     "q": "*",
     "q-io": "*",

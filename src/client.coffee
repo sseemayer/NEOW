@@ -32,7 +32,7 @@ class root.AbstractClient
     @cache.get(reqURLFormatted)
       .then (result) ->
         result
-      .fail ->
+      .catch ->
         client = self
         http.request(reqURLFormatted)
           .then (res) ->

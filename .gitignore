@@ -29,6 +29,6 @@ Session.vim
 
 ### This project
 config.json
-lib
+#lib
 
 .idea
